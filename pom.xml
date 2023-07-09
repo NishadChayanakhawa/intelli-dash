@@ -38,6 +38,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<argLine>${surefireArgLine}</argLine>
+					<skip>${skipTests}</skip>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -49,6 +50,7 @@
 						<exclude>**/IntelliDashApplication.class</exclude>
 						<exclude>**/intellidash/configurations/*.class</exclude>
 					</excludes>
+					<skip>${skipCodeCoverageCheck}</skip>
 				</configuration>
 				<executions>
 					<execution>
@@ -112,6 +114,21 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	
+	<profiles>
+		<profile>
+			<id>skipTests</id>
+			<activation>
+				<property>
+					<name>SkipTests</name>
+				</property>
+			</activation>
+			<properties>
+				<skipCodeCoverageCheck>true</skipCodeCoverageCheck>
+				<skipTests>true</skipTests>
+			</properties>
+		</profile>
+	</profiles>
 
 	<properties>
 		<maven-compiler-plugin.source>17</maven-compiler-plugin.source>
@@ -120,9 +137,8 @@
 		<jacoco-instruction-coveredratio.minimum>0.8</jacoco-instruction-coveredratio.minimum>
 		<jacoco-branch-coveredratio.minimum>0.8</jacoco-branch-coveredratio.minimum>
 		<jacoco-maven-plugin.version>0.8.9</jacoco-maven-plugin.version>
-		<!--
-		<sonar.cpd.exclusions>io.github.nishadchayanakhawa.testcompanion.model.dto/*.java,io.github.nishadchayanakhawa.testcompanion.model/*.java</sonar.cpd.exclusions>
-		-->
+		<skipCodeCoverageCheck>false</skipCodeCoverageCheck>
+		<skipTests>false</skipTests>
 	</properties>
 	<modules>
 		<module>intelli-dash-webapp</module>
