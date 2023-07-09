@@ -62,4 +62,4 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           password: ${{ secrets.VPS_PASSWORD }}
-          script: ./myapps/intelli-dash/deploy-intelli-dash.sh
+          script: echo ${{ secrets.VPS_PASSWORD }} | sudo -S ./myapps/intelli-dash/deploy-intelli-dash.sh
