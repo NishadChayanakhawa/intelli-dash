@@ -21,7 +21,7 @@ import io.github.nishadchayanakhawa.intellidash.services.UserService;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*;
 
 @SpringBootTest(classes = IntelliDashApplication.class,webEnvironment=SpringBootTest.WebEnvironment.DEFINED_PORT)
-public class IntelliDashApplicationControllersTest {
+class IntelliDashApplicationControllersTest {
 	@Value("${server.port}")
 	private int serverPort;
 	

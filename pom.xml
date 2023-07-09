@@ -120,9 +120,6 @@
 		<jacoco-instruction-coveredratio.minimum>0.8</jacoco-instruction-coveredratio.minimum>
 		<jacoco-branch-coveredratio.minimum>0.8</jacoco-branch-coveredratio.minimum>
 		<jacoco-maven-plugin.version>0.8.9</jacoco-maven-plugin.version>
-		<!--
-		<sonar.cpd.exclusions>io.github.nishadchayanakhawa.testcompanion.model.dto/*.java,io.github.nishadchayanakhawa.testcompanion.model/*.java</sonar.cpd.exclusions>
-		-->
 	</properties>
 	<modules>
 		<module>intelli-dash-webapp</module>
