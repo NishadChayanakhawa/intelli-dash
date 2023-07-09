@@ -114,7 +114,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<profiles>
 		<profile>
 			<id>skipTests</id>
@@ -137,6 +137,7 @@
 		<jacoco-instruction-coveredratio.minimum>0.8</jacoco-instruction-coveredratio.minimum>
 		<jacoco-branch-coveredratio.minimum>0.8</jacoco-branch-coveredratio.minimum>
 		<jacoco-maven-plugin.version>0.8.9</jacoco-maven-plugin.version>
+		<spring.profiles.active>dev</spring.profiles.active>
 		<skipCodeCoverageCheck>false</skipCodeCoverageCheck>
 		<skipTests>false</skipTests>
 	</properties>
