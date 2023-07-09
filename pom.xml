@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.nishadchayanakhawa</groupId>
 	<artifactId>intelli-dash</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<name>Intelli Dash</name>
 	<description>Application to connect to Test Management tools and provide
