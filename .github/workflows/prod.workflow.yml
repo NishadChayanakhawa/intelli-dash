@@ -20,6 +20,13 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      -
+        name: Get version
+        run: echo ::set-output name=version::$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+        id: project
+      - 
+        name: Show extracted Maven project version
+        run: echo ${{ steps.project.outputs.version }}
       - 
         name: Install
         run: mvn clean install -DSkipTests
